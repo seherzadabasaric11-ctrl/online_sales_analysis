@@ -10,3 +10,11 @@ class ProductMenager:
         else:
             for product in self.products:
                 print(product)
+                
+    def remove_product(self,product_name):
+      for product in self.products:
+        if product.name == product_name:
+            self.products.remove(product)
+            print(f"Product ˙{product_name}˙removed.")
+            return
+        print(f"Product ˙{product_name}˙not found.")
